@@ -1,0 +1,141 @@
+@import url(https://fonts.googleapis.com/css?family=DM+Sans:100,200,300,regular,500,600,700,100italic,200italic,300italic);
+
+.recent-tracks-container {
+  --rt-bg: #ffffff;
+  --rt-text: #2c3e50;
+  --rt-accent: #e26d5c;
+  --rt-secondary-text: #8b8b8b;
+  --rt-border: #eeeeee;
+  --rt-shadow: rgba(0, 0, 0, 0.1);
+  --rt-badge: #fa5252;
+
+  background: var(--rt-bg);
+  color: var(--rt-text);
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  font-family: 'DM Sans', sans-serif;
+  padding: 15px;
+  width: 300px;
+  z-index: 100;
+  position: relative; 
+}
+
+@media (prefers-color-scheme: dark) {
+  .recent-tracks-container {
+    --rt-bg: #1a2a3a;
+    --rt-text: #cad2c5;
+    --rt-secondary-text: #a0a0a0;
+    --rt-border: #2c3e50;
+    --rt-shadow: rgba(0, 0, 0, 0.4);
+  }
+}
+
+body.dark-mode .recent-tracks-container {
+  --rt-bg: #1a2a3a;
+  --rt-text: #cad2c5;
+}
+
+.recent-tracks-header {
+  margin-bottom: 12px;
+}
+
+.recent-tracks-header h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--rt-accent);
+}
+
+.track-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.track-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--rt-border);
+}
+
+.track-item:last-of-type {
+  border-bottom: none;
+}
+
+.album-art {
+  width: 60px;
+  height: 60px;
+  border-radius: 6px;
+  margin-right: 12px;
+  object-fit: cover;
+}
+
+.track-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.track-name {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.artist-name {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--rt-secondary-text);
+}
+
+.now-playing-badge {
+  display: inline-block;
+  background: var(--rt-badge);
+  color: white;
+  font-size: 0.65rem;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-top: 4px;
+  animation: pulse 2s infinite;
+}
+
+.time-ago {
+  font-size: 0.7rem;
+  color: var(--rt-secondary-text);
+  font-style: italic;
+}
+
+.lastfm-link {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 0.75rem;
+}
+
+.lastfm-link a {
+  text-decoration: none;
+  color: var(--rt-secondary-text);
+}
+
+.lastfm-brand {
+  font-weight: bold;
+  color: var(--rt-accent);
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+@media (max-width: 1500px) {
+  .recent-tracks-container {
+    margin: 1rem auto;
+    position: relative;
+    right: auto;
+    top: auto;
+  }
+}
