@@ -6,7 +6,7 @@ A React component that displays a list of recently scrobbled tracks from a Last.
 
 ## Features
 
-- Displays the 6 most recently played tracks
+- Displays the 7 most recently played tracks
 - Shows album art, track name, and artist name for each entry
 - Indicates if a track is currently playing with an animated badge
 - Shows a relative timestamp for past tracks (e.g. "3 minutes ago")
