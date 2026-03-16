@@ -2,6 +2,8 @@
 
 A React component that displays a list of recently scrobbled tracks from a Last.fm user profile. It fetches data from the Last.fm API and refreshes automatically every 30 seconds.
 
+![Screenshot](./screenshot.png)
+
 ## Features
 
 - Displays the 6 most recently played tracks
@@ -19,7 +21,7 @@ A React component that displays a list of recently scrobbled tracks from a Last.
 
 1. Create a Last.fm API account at [https://www.last.fm/api/account/create](https://www.last.fm/api/account/create) and obtain an API key.
 
-2. Add the API key to your `.env` file:
+2. Add the API key to an `.env` file which you need to create inside your root folder:
 
 ```
 VITE_LASTFM_API_KEY=your_api_key_here
